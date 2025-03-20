@@ -11,11 +11,89 @@ Any page or data can be rebuilt only when needed, without site visitors ever get
 `;
 ---
 
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-4" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="text-lg mb-10" />
-    <p class="mb-8">
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg btn-primary sm:btn-wide">Read the Docs</a>
-    </p>
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMZ-Style Gossip</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tmz-header {
+            font-family: 'Inter', sans-serif;
+        }
+        .article-content {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-red-600 text-white py-2 px-4 shadow-md flex justify-between items-center tmz-header">
+        <h1 class="text-4xl font-bold">TMZ</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:text-gray-200 font-semibold">NEWS</a></li>
+                <li><a href="#" class="hover:text-gray-200 font-semibold">SPORTS</a></li>
+                <li><a href="#" class="hover:text-gray-200 font-semibold">HIP HOP</a></li>
+                <li><a href="#" class="hover:text-gray-200 font-semibold">WATCH</a></li>
+                <li><a href="#" class="hover:text-gray-200 font-semibold">PHOTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-4 px-4">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <article class="bg-white rounded-lg shadow-md p-4 article-content">
+                <h2 class="text-xl font-semibold text-red-700 mb-2">Kanye and Elon: Unlikely Duo?!</h2>
+                 <div class="mb-2">
+                    <img src="elon_kayne.webp" alt="Kanye West and Elon Musk" class="rounded-md w-full">
+                </div>
+                <p class="text-gray-800 leading-relaxed mb-2 text-sm">
+                    The world is buzzing with the latest news: Kanye West and Elon Musk are reportedly collaborating on new music! 
+                    Sources say the track will be featured on Kanye's upcoming album and is expected to drop soon.
+                </p>
+                <p class="text-gray-800 leading-relaxed mb-2 text-sm">
+                    This unexpected pairing has sent shockwaves through both the music and tech industries. 
+                    Fans are speculating about the sound of the collaboration.
+                </p>
+                 <div class="my-2">
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">OMG! 🤯 Kanye dropped a BOMBSHELL! He&#39;s got ELON MUSK on his new album! 🚀🎶 Is this real life?! 🤯 These two TITANS are gonna break the internet! 🔥 Get ready for some next-level, mind-blowing beats! 🤯 Buckle up, folks, this is gonna be WILD! 🤪 <a href="https://twitter.com/kanyewest">#KanyeWest</a> <a href="https://twitter.com/elonmusk">#ElonMusk</a> <a href="https://twitter.com/hashtag/NewAlbum?src=hash&amp;ref_src=twsrc%5Etfw">#NewAlbum</a> <a href="https://twitter.com/hashtag/Music?src=hash&amp;ref_src=twsrc%5Etfw">#Music</a> <a href="https://twitter.com/hashtag/Collaboration?src=hash&amp;ref_src=twsrc%5Etfw">#Collaboration</a> <a href="https://twitter.com/hashtag/Yeezy?src=hash&amp;ref_src=twsrc%5Etfw">#Yeezy</a> <a href="https://twitter.com/hashtag/Tesla?src=hash&amp;ref_src=twsrc%5Etfw">#Tesla</a> <a href="https://twitter.com/hashtag/SpaceX?src=hash&amp;ref_src=twsrc%5Etfw">#SpaceX</a> 🚀🎶🔥
+                        </p>
+                        &mdash; Your Name (@YourTwitterHandle) <a href="https://twitter.com/YourTwitterHandle/status/1234567890123456789">Date</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <p class="text-gray-800 leading-relaxed mb-2 text-sm">
+                    What do you think of this unexpected collaboration? Drop your comments below!
+                </p>
+            </article>
+            <article class="bg-white rounded-lg shadow-md p-4">
+                <h2 class="text-xl font-semibold text-red-700 mb-2">Celebrity Couple Alert!</h2>
+                <p class="text-gray-800 leading-relaxed text-sm">
+                    [Details about a new celebrity couple...]
+                </p>
+            </article>
+             <article class="bg-white rounded-lg shadow-md p-4">
+                <h2 class="text-xl font-semibold text-red-700 mb-2">Drama at the Awards Show!</h2>
+                <p class="text-gray-800 leading-relaxed text-sm">
+                    [Details about drama at an awards show...]
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>&copy; 2024 TMZ. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
